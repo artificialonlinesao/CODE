@@ -1,11 +1,11 @@
 :root {
 	/*All used fonts (except w2ui)
 	----------------------------------*/
-	--cool-font: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+	--cool-font: 'tt-commons-pro', 'Source Sans Pro', 'Open Sans', sans-serif;
 	/*investigate what are the drawback in consisntly use --cool-fonts
 	for jquery-ui and perhaps mobile*/
-	--mobile-font: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-	--jquery-ui-font: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	--mobile-font: 'tt-commons-pro', 'Source Sans Pro', 'Open Sans', sans-serif;
+	--jquery-ui-font: 'tt-commons-pro', 'Source Sans Pro', 'Open Sans', sans-serif;
 
 	--docs-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	--docs--pre-font: 'Consolas', 'Menlo', 'Lucida Console', 'Courier New', monospace;
@@ -13,7 +13,7 @@
 	/* Shared color for cell and selection border */
 	--cell-cursor-selection-border-color: var(--color-primary);
 
-	--btn-size: 28px;
+	--btn-size: 24px;
 	--btn-padding: 2px;
 	--btn-img-size: calc(var(--btn-size) - var(--btn-padding) * 2);
 	--btn-color-colorpicker-size: 4px;
@@ -30,15 +30,15 @@
 
 	--tooltip-font-size: 14px;
 	--default-font-size: 12px;
-	--header-font-size: 16px;
+	--header-font-size: 12px;
 	/* tab min font-size */
 	--tb-min-fs: 11px;
 	/* tab min font-size without units*/
 	--tb-min-fs-u: 11;
 	/* tab max font-size */
-	--tb-max-fs: 16px;
+	--tb-max-fs: 12px;
 	/* tab max font-size wihtout units*/
-	--tb-max-fs-u: 16;
+	--tb-max-fs-u: 12;
 	/* tab font-size preferred value or scaler */
 	--tb-fs-s: 1vw;
 
@@ -52,6 +52,17 @@
 
 	/* Ruler */
 	--ruler-height: 20px;
+
+	/* KYZON */
+	--kyzon-solutions-logo-light: url('images/kyzon-solutions-logo-black.svg') left center / contain no-repeat;
+	--kyzon-solutions-logo-dark: url('images/kyzon-solutions-logo-white.svg') left center / contain no-repeat;
+	--kyzon-solutions-logo-aspect-ratio: 839.643 / 202.961;
+	--kyzon-flow-logo-light: url('images/kyzon-flow-logo-black.svg') left center / contain no-repeat;
+	--kyzon-flow-logo-dark: url('images/kyzon-flow-logo-white.svg') left center / contain no-repeat;
+	--kyzon-flow-logo-aspect-ratio: 913.958 / 400;
+	--kyzon-space-logo-light: url('images/kyzon-space-logo-black.svg') left center / contain no-repeat;
+	--kyzon-space-logo-dark: url('images/kyzon-space-logo-white.svg') left center / contain no-repeat;
+	--kyzon-space-logo-aspect-ratio: 1046.686 / 400;
 }
 
 html {
@@ -363,7 +374,8 @@ body {
 	flex-direction: column;
 }
 #toolbar-wrapper:not(.mobile) {
-	padding: 3px 0;
+	padding: 3px 8px;
+	box-sizing: border-box;
 }
 /* Remove bottom padding in calc as it affects formulabar*/
 #toolbar-wrapper.spreadsheet:not(.mobile) {

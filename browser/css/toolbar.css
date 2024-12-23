@@ -35,7 +35,7 @@
 }
 .ui-toolbar > div > div {
 	display: flex;
-	padding: 0px 5px;
+	padding: 0px 8px;
 }
 .ui-toolbar > div > div > .menubutton {
 	line-height: normal;
@@ -73,7 +73,6 @@
 #toolbar-down {
 	z-index: 11;
 	border-top: 1px solid var(--color-toolbar-border);
-	min-height: 32px;
 }
 #toolbar-down > .ui-scroll-wrapper > .vertical {
 	/* To do: test if all .ui-scroll-wrapper.vertical
@@ -197,40 +196,27 @@
 }
 .ui-scroll-left {
 	left: 0;
+	background: var(--color-main-background) url('images/lc_menu_chevron.svg') center center / 12px no-repeat;
+	transform: rotate(180deg);
 }
 .ui-scroll-right {
 	right: 0;
+	background: var(--color-main-background) url('images/lc_menu_chevron.svg') center center / 12px no-repeat;
 }
 .ui-scroll-left,
 .ui-scroll-right {
 	display: none;
 	position: absolute;
-	top: 0px;
+	top: -1px;
+	bottom: -1px;
 	width: 18px;
-	height: 100%;
 	z-index: 1001;
-	background-color: var(--color-background-dark);
-	box-shadow: 0px 0px 7px var(--color-box-shadow);
-}
-.ui-scroll-left::before,
-.ui-scroll-right::after {
-	position: absolute;
-	display: block;
-	content: '';
-	border: 10px solid transparent;
-	border-top-color: var(--color-primary);
-	top: calc(50% - 10px);
-}
-.ui-scroll-left::before {
-	rotate: 90deg;
-	right: 0px;
-}
-.ui-scroll-right::after {
-	rotate: 270deg;
+	background-color: var(--color-main-background);
+	border: 1px solid var(--color-toolbar-border);
 }
 .ui-scroll-left:hover,
 .ui-scroll-right:hover {
-	background-color: var(--color-background-darker);
+	background-color: var(--color-background-dark);
 }
 
 .notebookbar-scroll-wrapper {
@@ -238,10 +224,7 @@
 }
 #toolbar-wrapper.hasnotebookbar .ui-scroll-left,
 #toolbar-wrapper.hasnotebookbar .ui-scroll-right {
-	/* .notebookbar-scroll-wrapper's height */
-	height: 72px;
-	/* #toolbar-wrapper:not(.mobile)'s top padding */
-	top: 3px;
+	top: 0px;
 }
 
 .main-nav:not(.hasnotebookbar) ~ #toolbar-wrapper .toolbar-row {

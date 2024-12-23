@@ -694,13 +694,6 @@ L.Control.NotebookbarWriter = L.Control.Notebookbar.extend({
 				'vertical': 'true'
 			},
 			{
-				'id': 'home-insert-annotation',
-				'type': 'bigtoolitem',
-				'text': _UNO('.uno:InsertAnnotation'),
-				'command': '.uno:InsertAnnotation',
-				'accessibility': { focusBack: false, combination: 'ZC', de: 'ZC' }
-			},
-			{
 				'type': 'container',
 				'children': [
 					{

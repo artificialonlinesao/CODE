@@ -236,7 +236,7 @@ td.jsdialog > [id^='table-box']:not(.sidebar) {
 	max-width: 700px;
 }
 /* - Also used in SpellingDialog where suggestion come in form
-     of an image*/
+	 of an image*/
 .jsdialog.ui-scrollwindow.has-ui-drawing-area {
 	width: max-content;
 }
@@ -1410,7 +1410,7 @@ input[type='number']:hover::-webkit-outer-spin-button {
 	border: 4px solid transparent;
 	border-top: 5px solid var(--color-main-text);
 	display: inline-block !important;
-	margin-left: 3px;
+	margin-left: 2px;
 	margin-top: 4px;
 }
 
@@ -1420,7 +1420,7 @@ input[type='number']:hover::-webkit-outer-spin-button {
 
 .arrowbackground {
 	box-sizing: border-box;
-	width: 16px;
+	width: 12px;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -1437,6 +1437,11 @@ input[type='number']:hover::-webkit-outer-spin-button {
 
 .unoarrow:not([disabled]):hover, .arrowbackground:not([disabled]):hover .unoarrow {
 	border-top-color: var(--color-text-darker);
+}
+
+/* our stuff */
+.unobutton:has(~ .arrowbackground) {
+	padding-right: 0px;   
 }
 
 /* menu button */

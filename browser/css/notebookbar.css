@@ -196,6 +196,17 @@ html[data-theme='dark'] .savemodified.unotoolbutton .unobutton img {
 	width: max-content;
 }
 
+/* our stuff */
+.ui-content.level-0 .ui-tabpage > .horizontal.notebookbar {
+	grid-gap: 12px;
+}
+.ui-content.level-0 .ui-tabpage > .horizontal.notebookbar > .vertical.notebookbar:not(:last-child) {
+	padding-right: 12px;
+	border-right: 1px solid var(--color-toolbar-border);
+	height: 100%;
+	align-content: center;
+}
+
 /* unobuttons */
 
 /* avoid bug with arrow in new line when window is small */
@@ -326,12 +337,29 @@ html[data-theme='dark'] .savemodified.unotoolbutton .unobutton img {
 
 .unotoolbutton.notebookbar.has-label > *:not(.arrowbackground) { /*so they stay side by side*/
 	display: table-cell;
-	width: 100%;
+	width: min-content;
 	height: 100%;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
 }
-
+.unotoolbutton.notebookbar.has-label > *:not(.arrowbackground) label {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 .unotoolbutton.notebookbar.has-label {
 	text-align: center;
+	grid-template-rows: auto auto;
+	justify-items: center;
+	height: 100%;
+}
+.unotoolbutton.notebookbar.has-label .arrowbackground {
+	width: 100%;
+	grid-column: unset;
+}
+.unotoolbutton.notebookbar.has-label .arrowbackground > * {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .unotoolbutton.notebookbar.has-label:not(.inline) img {
